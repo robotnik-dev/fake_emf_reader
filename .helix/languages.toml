@@ -1,0 +1,5 @@
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer.config.check]
+targets = ["x86_64-unknown-linux-gnu"]

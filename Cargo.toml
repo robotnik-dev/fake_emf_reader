@@ -1,6 +1,6 @@
 [package]
 edition = "2021"
-name = "discovery_v2"
+name = "fake_emf_reader"
 version = "0.1.0"
 
 [dependencies]

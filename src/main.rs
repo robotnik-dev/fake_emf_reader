@@ -32,7 +32,7 @@ fn main() -> ! {
 
     loop {
         if let Ok(value) = adc.read_channel(&mut pot_in) {
-            let percent = value as f32 / i16::MAX as f32;
+            let percent = value as f32 / (i16::MAX as f32 / 2.0);
             rprintln!("{}", percent);
             match percent {
                 0.05..0.2 => {

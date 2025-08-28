@@ -14,4 +14,10 @@ pkgs.mkShellNoCC {
     probe-rs-tools
     minicom
   ];
+
+  shellHook = ''
+    if ! rustup target list --installed | grep -q thumbv7em-none-eabihf; then
+      rustup target add thumbv7em-none-eabihf
+    fi
+  '';
 }

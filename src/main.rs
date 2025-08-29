@@ -35,8 +35,8 @@ fn main() -> ! {
             let percent = value as f32 / (i16::MAX as f32 / 2.0);
             rprintln!("{}", percent);
             match percent {
-                0.05..0.2 => {
-                    // 5 - 20 %
+                0.0..0.2 => {
+                    // 0 - 20 % (control LED to be always on when fully turned down)
                     // the first to 1, the rest to 0
                     gpio1.set_high().unwrap();
                     gpio2.set_low().unwrap();
